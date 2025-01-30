@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "inlineSourceMap": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "outDir": "./dist",
+    "strict": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noUncheckedIndexedAccess": true,
+    "noErrorTruncation": true,
+    "baseUrl": ".",
+    "paths": {
+      "@models/*": ["../models/src/*"]
+    }
+  }
+}
