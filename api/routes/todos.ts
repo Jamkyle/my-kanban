@@ -1,14 +1,14 @@
 import axios from 'axios';
 import { Context } from 'koa';
 import { Route } from '../types';
-import { TodosArraySchema } from '../../../models/src/todos';
+import { schemas } from '../../models';
 
 export const todos: Route<string> = async ({ response }: Context) => {
   try {
     const { data } = await axios.get(
       'https://jsonplaceholder.typicode.com/todos',
     );
-    const validatedTodos = TodosArraySchema.safeParse(data);
+    const validatedTodos = schemas.TodosArraySchema.safeParse(data);
 
     if (!validatedTodos.success) {
       console.error('Validation error:', validatedTodos.error.errors);
